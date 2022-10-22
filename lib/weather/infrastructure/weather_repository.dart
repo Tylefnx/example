@@ -7,7 +7,7 @@ import 'package:example/weather/infrastructure/weather_service.dart';
 
 class WeatherRepository {
   final WeatherService service = WeatherService();
-  Future<Either<WeatherFailure, Weather>> fetchCategories() async {
+  Future<Either<WeatherFailure, Weather>> fetchWeather() async {
     int randomResponse = Random().nextInt(6);
 
     switch (randomResponse) {
