@@ -8,9 +8,10 @@ import 'package:example/weather/infrastructure/weather_service.dart';
 class WeatherRepository {
   final WeatherService service = WeatherService();
   Future<Either<WeatherFailure, Weather>> fetchCategories() async {
-    int response = Random().nextInt(6);
 
-    switch (response) {
+    int randomResponse = Random().nextInt(6);
+
+    switch (randomResponse) {
       case 1:
         return left(const WeatherFailure.server(
             error: 'There is a problem with the server'));
