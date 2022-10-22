@@ -14,12 +14,15 @@ class WeatherRepository {
       case 1:
         return left(
           const WeatherFailure.server(
-              error: 'There is a problem with the server'),
+            error: 'There is a problem with the server',
+          ),
         );
-        
+
       case 2:
         return left(
-          const WeatherFailure.storage(error: "No internet"),
+          const WeatherFailure.storage(
+            error: "No internet",
+          ),
         );
 
       default:
