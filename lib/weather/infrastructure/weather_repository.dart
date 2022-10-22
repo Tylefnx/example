@@ -6,7 +6,10 @@ import 'package:dartz/dartz.dart';
 import 'package:example/weather/infrastructure/weather_service.dart';
 
 class WeatherRepository {
-  final WeatherService service = WeatherService();
+  WeatherRepository(this.service);
+  
+  final WeatherService service;
+  
   Future<Either<WeatherFailure, Weather>> fetchWeather() async {
     int randomResponse = Random().nextInt(6);
 
