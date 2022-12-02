@@ -33,3 +33,5 @@ class WeatherRepository {
     }
   }
 }
+// TODO: 4-) Attığımız requestlerin düzgün çalışıp çalışmadığını kontrol ediyoruz duruma göre yarattığımız data classını veya failure objelerini döndürüyoruz.
+// Burada bir request yapamadığımız için bi şeyleri feykledik

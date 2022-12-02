@@ -14,13 +14,14 @@ class WeatherWidget extends ConsumerStatefulWidget {
 class _WeatherWidgetState extends ConsumerState<WeatherWidget> {
   @override
   Widget build(BuildContext context) {
-    final weatherState = ref.watch(weatherStateNotifierProvider);
-
+    final weatherState = ref.watch(weatherStateNotifierProvider); // TODO: 8-) weatherState değişkeni oluşturup providerımız aracılığıyla state değerine ulaşıyoruz. 
+    // ref.watch ile state imizin değişimini takip edebiliyoruz. ref.read direkt state imizi tek seferlik çalıştırmak için
     return Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: weatherState.map(
+          // TODO: 9-) weatherState'in aldığı değere göre hangi widgetları göstereceğimizi seçiyoruz.
           initial: (_) => const [SizedBox()],
           loading: (_) => const [CircularProgressIndicator()],
           done: (_) => [

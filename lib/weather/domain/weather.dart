@@ -11,5 +11,6 @@ class Weather with _$Weather {
     required double degree,
   }) = _Weather;
 
-  factory Weather.fromJson(Map<String, dynamic> json) => _$WeatherFromJson(json);
+  factory Weather.fromJson(Map<String, dynamic> json) => _$WeatherFromJson(json); // fromJson fonksiyonu eklendi ve json_serializable g.dart dosyası oluşturdu
 }
+// TODO: 1-) Freezed class ı oluşturuldu

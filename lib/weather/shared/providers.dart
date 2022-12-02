@@ -19,3 +19,5 @@ final weatherStateNotifierProvider =
     ref.watch(weatherRepoProvider),
   ),
 );
+
+// TODO: 6-) service, repository ve state notifier objelerini yaratıp ref.read() gibi riverpod fonksiyonlarıyla kullanabilmek adına provider nesnelerinin içine alıyoruz
